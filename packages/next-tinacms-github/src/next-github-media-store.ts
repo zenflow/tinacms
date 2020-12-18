@@ -17,7 +17,7 @@ limitations under the License.
 */
 
 import path from 'path'
-import { GithubMediaStore } from 'react-tinacms-github'
+import { GithubMediaStore } from '@zen_flow/react-tinacms-github'
 import { Media, MediaListOptions, MediaUploadOptions } from '@tinacms/core'
 
 export class NextGithubMediaStore extends GithubMediaStore {
