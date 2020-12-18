@@ -1,6 +1,6 @@
 {
   "name": "@zen_flow/next-tinacms-github",
-  "version": "0.35.0-zenflow.0",
+  "version": "0.35.0-zenflow.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
