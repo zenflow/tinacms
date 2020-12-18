@@ -1,6 +1,6 @@
 {
-  "name": "react-tinacms-github",
-  "version": "0.35.0",
+  "name": "@zen_flow/react-tinacms-github",
+  "version": "0.35.0-zenflow.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
