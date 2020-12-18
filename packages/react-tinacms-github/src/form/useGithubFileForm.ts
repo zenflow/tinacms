@@ -19,6 +19,7 @@ limitations under the License.
 import { GitFile } from './useGitFileSha'
 import { useForm, FormOptions } from 'tinacms'
 import { useGithubFile } from '../github-client'
+import { Form } from '@tinacms/forms'
 
 export interface GithubFormOptions extends Partial<FormOptions<any>> {
   serialize: (data: any) => string
@@ -27,13 +28,13 @@ export interface GithubFormOptions extends Partial<FormOptions<any>> {
 export const useGithubFileForm = <T = any>(
   file: GitFile<T>,
   options: GithubFormOptions
-) => {
+): [T, Form] => {
   const githubFile = useGithubFile({
     path: file.fileRelativePath,
     serialize: options.serialize,
   })
 
-  const [formData, form] = useForm({
+  const [formData, form] = useForm<T>({
     id: file.fileRelativePath,
     label: options.label || file.fileRelativePath,
     initialValues: file.data,
